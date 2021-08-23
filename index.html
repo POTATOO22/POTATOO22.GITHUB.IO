@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>SECOND</title>
+	</head>
+	<body>
+
+		<div class="heading">
+			<p>SPECIAL DAY</p>
+			<h2>SECOND</h2>
+		</div>
+
+		<div class="timer">
+			<p id="Day"></p>
+			<h6>days</h6>
+		</div>
+
+		<div class="timer">	
+			<p id="Hour"></p>
+			<h6>hours</h6>
+		</div>
+
+		<div class="timer">
+			<p id="Minute"></p>
+			<h6>minutes</h6>
+		</div>
+
+		<div class="timer">
+			<p id="Second"></p>
+			<h6>seconds</h6>
+		</div>
+<script type="text/javascript">
+		
+	var countDownDate = new Date("august 25, 2021 17:00:00").getTime();
+	  	var x = setInterval (function(){
+		var now = new Date().getTime();
+		var distance = countownDate - now;
+
+
+		var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		var seconds = Math.floor((distance % (1000 * 60)) / (1000));
+
+		document.getElementById('Day').setInterval = days;
+		document.getElementById('hour').setInterval = hours;
+		document.getElementById('minute').setInterval = minutes;
+		document.getElementById('second').setInterval= seconds;
+		}
+</script>
+</body>
+</html>
